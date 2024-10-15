@@ -5,12 +5,18 @@ import com.example.server.grpcserver.AddressResponse;
 import com.example.server.grpcserver.CepServiceGrpc;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @GrpcService
+//@ConditionalOnBean(annotation = GrpcService.class)
 public class CepServiceImp extends CepServiceGrpc.CepServiceImplBase {
+
+    private static final Logger logger = LoggerFactory.getLogger("logger");
 
     @Override
     public void getAddress(AddressRequest request, StreamObserver<AddressResponse> responseObserver) {
@@ -23,6 +29,7 @@ public class CepServiceImp extends CepServiceGrpc.CepServiceImplBase {
                 .setCep(cep)
                 .setCidade(cidade)
                 .build();
+        logger.info(String.format("client sent this cep: %1s", cep));
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }

@@ -35,16 +35,7 @@
 		<annotation-api.version>1.3.2</annotation-api.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>javax.annotation</groupId>
@@ -53,17 +44,17 @@
 		</dependency>
 
 		<!-- For both -->
-		<dependency>
-			<groupId>net.devh</groupId>
-			<artifactId>grpc-spring-boot-starter</artifactId>
-			<version>2.5.1.RELEASE</version>
-			<exclusions>
-				<exclusion>
-					<groupId>io.grpc</groupId>
-					<artifactId>grpc-netty-shaded</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>net.devh</groupId>-->
+<!--			<artifactId>grpc-spring-boot-starter</artifactId>-->
+<!--			<version>2.5.1.RELEASE</version>-->
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>io.grpc</groupId>-->
+<!--					<artifactId>grpc-netty-shaded</artifactId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
+<!--		</dependency>-->
 		<!-- For the client (only) -->
 		<dependency>
 			<groupId>net.devh</groupId>
@@ -76,9 +67,27 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>net.devh</groupId>-->
+<!--			<artifactId>grpc-client-spring-boot-autoconfigure</artifactId>-->
+<!--			<version>2.5.1.RELEASE</version>-->
+<!--			<type>pom</type>-->
+<!--		</dependency>-->
+
 		<dependency>
 			<groupId>net.devh</groupId>
-			<artifactId>grpc-client-spring-boot-autoconfigure</artifactId>
+			<artifactId>grpc-server-spring-boot-starter</artifactId>
+			<version>3.1.0.RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<groupId>io.grpc</groupId>
+					<artifactId>grpc-netty-shaded</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>net.devh</groupId>
+			<artifactId>grpc-server-spring-boot-autoconfigure</artifactId>
 			<version>2.5.1.RELEASE</version>
 			<type>pom</type>
 		</dependency>
@@ -89,10 +98,17 @@
 			<version>${io.grpc.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>com.google.protobuf</groupId>-->
+<!--			<artifactId>protobuf-java</artifactId>-->
+<!--			<version>4.28.2</version>-->
+<!--		</dependency>-->
+
+		<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java-util -->
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java</artifactId>
+			<artifactId>protobuf-java-util</artifactId>
 			<version>4.28.2</version>
 		</dependency>
 
