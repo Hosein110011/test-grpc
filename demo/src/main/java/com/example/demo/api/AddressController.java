@@ -1,7 +1,6 @@
-/*
-package com.example.client.api;
+package com.example.demo.api;
 
-import com.example.client.service.AddressClientService;
+import com.example.demo.service.AddressClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,4 +35,4 @@ public class AddressController {
     public String hello() {
         return "HELLO !!!!!";
     }
-}*/
+}
