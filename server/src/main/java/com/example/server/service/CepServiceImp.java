@@ -1,8 +1,8 @@
 package com.example.server.service;
 
-import com.example.server.grpcserver.AddressRequest;
-import com.example.server.grpcserver.AddressResponse;
-import com.example.server.grpcserver.CepServiceGrpc;
+import com.example.common.grpc.AddressRequest;
+import com.example.common.grpc.AddressResponse;
+import com.example.common.grpc.CepServiceGrpc;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.slf4j.Logger;

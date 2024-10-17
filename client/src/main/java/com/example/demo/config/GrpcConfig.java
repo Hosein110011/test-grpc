@@ -1,6 +1,5 @@
 package com.example.demo.config;
 
-import com.example.demo.grpcclient.CepServiceGrpc;
 import com.example.demo.service.AddressClientService;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 //@GrpcClientBean(
 //        clazz = AddressClientService.class,
 //        beanName = "blockingStub",
@@ -17,9 +16,9 @@ import org.springframework.context.annotation.Configuration;
 //)
 public class GrpcConfig {
 
-    @Bean
-    AddressClientService fooServiceBean(@Autowired CepServiceGrpc.CepServiceBlockingStub blockingStub) {
-        return new AddressClientService(blockingStub);
-    }
+//    @Bean
+//    AddressClientService fooServiceBean(@Autowired CepServiceGrpc.CepServiceBlockingStub blockingStub) {
+//        return new AddressClientService(blockingStub);
+//    }
 
 }

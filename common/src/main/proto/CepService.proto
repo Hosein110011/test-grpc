@@ -1,6 +1,6 @@
 syntax = "proto3";
 option java_multiple_files = true;
-package com.example.demo.grpcclient;
+package com.example.common.grpc;
 
 message AddressRequest {
   string cep = 1;
@@ -12,5 +12,5 @@ message AddressResponse {
 }
 
 service CepService {
-  rpc getAddress(AddressRequest) returns (AddressResponse);
+  rpc getAddress(AddressRequest) returns (stream AddressResponse);
 }
